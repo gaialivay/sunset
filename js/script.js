@@ -2,7 +2,12 @@ var date = new Date();
 let hours = date.getHours(); // this will give you the time in 24h format— if it's 7pm, it'll return '19' for example
 
 function loaded() {
-	if (hours >= 5 && hours < 6) {
+
+	if (hours >= 1 && hours <5) {
+		document.getElementById('video').src = "archive/night.mp4";
+	}  
+
+	else if (hours >= 5 && hours < 6) {
 		document.getElementById('video').src = "archive/sunrise.mp4";
 	}
 
@@ -22,7 +27,7 @@ function loaded() {
 		document.getElementById('video').src = "archive/sunset.mp4";
 	}
 
-	else if (hours >= 20 && hours <5) {
+	else if (hours >= 20 && hours <24) {
 		document.getElementById('video').src = "archive/night.mp4";
 	}
 }
